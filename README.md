@@ -1,4 +1,6 @@
-# Py-OpenMRS
+# OpenMRS API Python Library
+
+[![Build Status](https://travis-ci.org/isears/openmrsapi.svg?branch=master)](https://travis-ci.org/isears/openmrsapi)
 
 A python library for interacting with OpenMRS API
 
