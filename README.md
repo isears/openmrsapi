@@ -5,8 +5,8 @@ A python library for interacting with OpenMRS API
 ## Install
 
 ```bash
-git clone https://github.com/fortitudoinc/py-openmrs
-cd py-openmrs
+git clone https://github.com/isears/openmrsapi
+cd openmrsapi
 pip3 install .
 ```
 
