@@ -9,4 +9,7 @@ install:
 
 script:
   - source tests/demo.env
-  - python tests/main.py
+  - python tests/test.py
+
+after_success:
+  - coveralls
