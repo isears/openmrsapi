@@ -23,6 +23,8 @@ export OPENMRS_PASSWORD=Admin123
 export OPENMRS_API_ENDPOINT=https://demo.openmrs.org/openmrs/ws/rest/v1/
 ```
 
+Alternatively: `source tests/demo.env`
+
 Example:
 
 ```python

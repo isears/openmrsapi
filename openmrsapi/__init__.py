@@ -37,7 +37,10 @@ def _meta_request(resource, method, data='', results_only=True):
     else:
         raise ValueError('Method parameter must be one of: get, post, delete')
 
-    ret = json.loads(resp.text)
+    if resp.status_code == 204:
+        return {}
+    else:
+        ret = json.loads(resp.text)
 
     if results_only:
         if 'results' in ret:
@@ -78,19 +81,21 @@ def post(resource, data='', results_only=True):
     return _meta_request(resource, 'post', data=data, results_only=results_only)
 
 
-def delete(resource, data='', results_only=True):
+def delete(resource, uuid, data='', results_only=True):
     """
     Makes an HTTP DELTE request to the API
 
     :param resource: API resource (e.g. user)
     :type resource: str
+    :param uuid: UUID of resource to be deleted
+    :type uuid: str
     :param data: Data payload for request
     :type data: dict
     :param results_only: Whether or not to return metadata along with results
     :type results_only: bool
     :return: Any data returned by API call
     """
-    return _meta_request(resource, 'delete', data=data, results_only=results_only)
+    return _meta_request(resource + '/' + uuid, 'delete', data=data, results_only=results_only)
 
 
 def display_to_uuid(obj_type, display):
