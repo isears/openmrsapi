@@ -103,7 +103,7 @@ def display_to_uuid(obj_type, display):
     :type display: str
     :return: All uuids corresponding to the object with the given 'display' attribute
     """
-    res = get('/' + obj_type)
+    res = get(obj_type)
     ret = list()
     
     for obj_instance in res:
