@@ -10,7 +10,7 @@ install:
 
 script:
   - source tests/demo.env
-  - coverage run tests/test.py
+  - coverage run --source openmrsapi setup.py test
 
 after_success:
   - coveralls
