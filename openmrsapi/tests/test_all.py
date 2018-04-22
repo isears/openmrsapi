@@ -41,7 +41,3 @@ class AllTests(unittest.TestCase):
             uuids = openmrsapi.display_to_uuid('user', user['display'])
             assert len(uuids) == 1
             assert uuids[0] == user['uuid']
-
-
-if __name__ == '__main__':
-    unittest.main()

@@ -2,6 +2,8 @@ import requests
 import os
 import json
 
+from .user import *
+
 try:
     API_ENDPOINT = os.environ['OPENMRS_API_ENDPOINT']
     USER = os.environ['OPENMRS_USERNAME']
